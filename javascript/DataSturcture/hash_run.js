@@ -1,6 +1,7 @@
 const HashTable = require('./simple_hash.js'); 
 const BetterHashTable = require('./better_hash.js');
-const SeperateChainingHashTable = require('./seperateChainingHash.js');
+const SeperateChainingHashTable = require('./seperatechainingHash.js');
+const LineProbingHashTable = require('./lineprobingHash.js');
 var someNames = "David Jennifer Donnie Raymond Cynthia Mike Clayton Danny Jonathan".split(" ");
 var phoneNums = "023452 1234125 1235125 1235213 123425 6623456 1234523 2346236 1252345".split(" ");
 
@@ -24,3 +25,10 @@ for(var i = 0; i< someNames.length; i++){
     schTable.put(someNames[i], phoneNums[i]); 
 }
 schTable.showDistro();
+
+console.log('line probing hash table');
+var lpTable = new LineProbingHashTable(); 
+for(var i = 0; i< someNames.length; i++){
+    lpTable.put(someNames[i], phoneNums[i]); 
+}
+lpTable.showDistro();
