@@ -11,6 +11,7 @@ function show(){
 function BST() { 
     this.root = null; 
     this.insert = insert; 
+    this.remove = remove;
 }
 
 function insert(data){
@@ -38,6 +39,35 @@ function insert(data){
             }
         }
     }
+}
+
+function remove(data){
+    this.root = removeNode(this.root, data);
+}
+function removeNode(node, data){
+    if(node == null) { 
+        return null;
+    }
+    if(data == node.data){
+        if(node.left == null && node.right == null){
+            return null;
+        }
+        if(node.left == null){
+            return node.right; 
+        }
+        if(node.right == null){
+            return node.left; 
+        }
+        var tempNode = getSmallest(node.right);
+        node.data = tempNode.data; 
+        node.right = removeNode(node.right, tempNode,data);
+
+    }else if(data < node.data){
+        node.left = removeNode(node.left, data); 
+    }else { 
+        node.right = removeNode(node.right, data);
+    }
+    return node; 
 }
 
 module.exports = BST; 

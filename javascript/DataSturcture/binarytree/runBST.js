@@ -26,3 +26,7 @@ console.log(max);
 console.log('search value 37'); 
 var value = search.find(37, nums); 
 console.log('found : ' + value); 
+console.log('after delete value 37'); 
+nums.remove(37);
+inOrder(nums.root);
+
