@@ -14,3 +14,15 @@ preOrder(nums.root);
 console.log('Postorder Traversal:');
 const postOrder = require('./postOrder.js');
 postOrder(nums.root);
+
+
+const search = require('./search.js'); 
+console.log('Min')
+var min = search.getMin(nums); 
+console.log(min);
+console.log('Max')
+var max = search.getMax(nums); 
+console.log(max); 
+console.log('search value 37'); 
+var value = search.find(37, nums); 
+console.log('found : ' + value); 
