@@ -7,6 +7,7 @@ function Graph(v){
     this.vertices = v; 
     this.edges = 0; 
     this.adj = []; 
+    this.marked = [];
     for(var i = 0; i < this.vertices; ++i){
         this.adj[i] = []; 
     }
