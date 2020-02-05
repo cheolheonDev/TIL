@@ -10,10 +10,12 @@ function bfs(s){
         if(v != undefined){
             console.log('visited vertex : '  + v);
         }
-        for(var i = 0 ; i < this.adj.length ; i++){
-            if(!this.marked[i]){
-                this.marked[i] = true; 
-                queue.push(i); 
+        for(var i = 0 ; i < this.adj[v].length ; i++){
+            var w = this.adj[v][i];
+            if(w && !this.marked[w]){
+                this.marked[w] = true; 
+                this.edgeTo[w] = v;
+                queue.push(w); 
             }
         }
     }

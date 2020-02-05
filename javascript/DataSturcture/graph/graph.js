@@ -7,6 +7,7 @@ function Graph(v){
     this.vertices = v; 
     this.edges = 0; 
     this.adj = []; 
+    this.edgeTo = []; // bfs 를 활용하여 경로를 찾을때 사용됨
     this.marked = [];
     for(var i = 0; i < this.vertices; ++i){
         this.adj[i] = []; 
@@ -23,7 +24,7 @@ function addEdge(v,w){
 }
 
 function showGraph(){
-    for( var i =0 ; i < this.vertices; ++i){
+    for( var i = 0 ; i < this.vertices; ++i){
         var log = i + " -> ";
         for(var j = 0 ; j < this.vertices; ++j){
             if(this.adj[i][j] != undefined){
