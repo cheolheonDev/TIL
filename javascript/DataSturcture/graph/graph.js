@@ -5,6 +5,7 @@ function Vertex(lablel){
 
 function Graph(v){
     this.vertices = v; 
+    this.vertexList = []; 
     this.edges = 0; 
     this.adj = []; 
     this.edgeTo = []; // bfs 를 활용하여 경로를 찾을때 사용됨
@@ -28,7 +29,7 @@ function showGraph(){
         var log = i + " -> ";
         for(var j = 0 ; j < this.vertices; ++j){
             if(this.adj[i][j] != undefined){
-                log += this.adj[i][j] + ' ';
+                log += this.vertexList[this.adj[i][j]] + ' ';
             }
         }
         console.log(log);
