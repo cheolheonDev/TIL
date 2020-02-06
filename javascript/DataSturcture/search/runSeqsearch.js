@@ -1,4 +1,6 @@
 const seqSearch = require('./seqsearch');
+const findMin = require('./findmin.js'); 
+const findMax = require('./findmax.js'); 
 
 function dispArr(arr){
     var log = '';
@@ -25,3 +27,8 @@ if(seqSearch(nums, search)){
 }else{
     console.log('10 is not in Array'); 
 }
+
+console.log('배열 내에서 최소값은 '); 
+console.log(findMin(nums));
+console.log('배열 내에서 최대값은 '); 
+console.log(findMax(nums));
