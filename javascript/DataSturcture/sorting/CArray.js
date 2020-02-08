@@ -1,17 +1,25 @@
 function CArray(numElements){
     this.dataStore = []; 
+    this.backup = [];
     this.pos = 0; 
     this.numElements = numElements; 
     this.insert = insert; 
     this.toString = toString; 
     this.clear = clear; 
     this.setData = setData; 
+    this.backupData = backupData; 
+    this.restoreFromBackup = restoreFromBackup;
     this.swap = swap; 
     for(var i = 0; i < numElements; ++i){
         this.dataStore[i] = i; 
     }
 }
-
+function backupData () {
+    this.backup = this.dataStore.slice()
+}
+function restoreFromBackup (){
+    this.dataStore = this.backup.slice()
+}
 function setData (){
     for(var i = 0 ; i < this.numElements ; ++i){
         this.dataStore[i]  = Math.floor(Math.random() * (this.numElements+1));
