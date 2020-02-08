@@ -8,7 +8,6 @@ function insertionSort(carray){
             --inner;
         }
         carray.dataStore[inner] = temp;
-        console.log(carray.toString());
     }
 }
 module.exports = insertionSort;

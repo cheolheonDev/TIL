@@ -10,7 +10,6 @@ function selectionSort(carray){
                 }
             }
         carray.swap(carray.dataStore, outer, min);
-        console.log(carray.toString());
     }
 }
 module.exports = selectionSort;

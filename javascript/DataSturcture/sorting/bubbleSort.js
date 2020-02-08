@@ -7,7 +7,6 @@ function bubbleSort(carray){
                carray.swap(carray.dataStore, inner, inner+1);
             }
         }
-        console.log(carray.toString());
     }
 }
 module.exports = bubbleSort;
