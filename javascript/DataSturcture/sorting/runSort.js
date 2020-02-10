@@ -2,6 +2,7 @@ const CArray = require('./CArray.js');
 const bubbleSort = require('./bubbleSort.js');
 const insertionSort = require('./insertionSort.js');
 const selectionSort = require('./selectionSort.js');
+const shellSort = require('./shellSort.js');
 
 
 
@@ -29,6 +30,17 @@ console.log('= sorted');
 console.log(mynums.toString());
 
 console.log('=== selection sort');
+var numElements = 10; 
+var mynums = new CArray(numElements);
+mynums.setData(); 
+console.log('= before sorted');
+console.log(mynums.toString());
+console.log('sorting...');
+shellSort(mynums);
+console.log('= sorted');
+console.log(mynums.toString());
+
+console.log('=== shell sort'); 
 var numElements = 10; 
 var mynums = new CArray(numElements);
 mynums.setData(); 
