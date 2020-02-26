@@ -33,4 +33,3 @@ function doSomethingCool(FeatureXYZ){
     console.log(val);
 }
 
-
