@@ -94,8 +94,8 @@ var json_parse = (function () {
                 uffff = uffff * 16 + hex;
               }
               string += String.fromCharCode(uffff);
-            } else if (typeof excapee[ch] === "string") {
-              string += excapeee[ch];
+            } else if (typeof escapee[ch] === "string") {
+              string += escapee[ch];
             } else {
               break;
             }
@@ -244,7 +244,7 @@ var json_parse = (function () {
 
 console.log(
   json_parse(
-    JSON.stringify({
+    JSON.stringfy({
       a: "sadfasdf",
       b: [1, 2, 3, 4],
       c: {
