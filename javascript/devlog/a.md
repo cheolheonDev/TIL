@@ -65,7 +65,7 @@ ssh key가 있어도 안되는 경우,
 출처 2 - [Git (7) Github 비밀번호 입력 없이 pull/push 하기(github ssh key 설정)](https://goddaehee.tistory.com/254)
 
 
-### 3. 깃헙에 비밀번호 없이 접속하기 (SSH 사용법)
+### 3. 다른 레포에 github page 배포하기 
 
 
 #### 요약
