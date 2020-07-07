@@ -59,17 +59,8 @@ ssh key가 있어도 안되는 경우,
 > ssh-add ~/.ssh/id_rsa
 > ```
  
-
-출처 1  -  [ssh 생성 및 github 저장소 저장하기 - JOOTC 블로그 ](https://jootc.com/p/201905122827)
-
-출처 2 - [Git (7) Github 비밀번호 입력 없이 pull/push 하기(github ssh key 설정)](https://goddaehee.tistory.com/254)
-
-
 ### 3. 다른 레포에 github page 배포하기 
 
-
-#### 요약
->
 
 배포할때 개인 사이트 또는 특정 레포의 프로젝트 사이트 두 종류를 다른 방법으로 하게 된다. 
 
@@ -78,7 +69,7 @@ package.json에 다음처럼 명령어를 입력해준다.
 
 > ```shell
 >"scripts": { 
->    "deploy": "gatsby build && gh-pages -d public -b master"
+> "deploy": "gatsby build && gh-pages -d public -b master"
 >}
 > ```
 
@@ -96,11 +87,11 @@ package.json에 다음처럼 명령어를 입력해준다.
 
 배포 끝..
 
-출처 1. [GatsbyJS 개발 환경 셋팅부터 GitHub Pages 배포까지 (musma 블로그)](https://musma.github.io/2019/08/09/gatsby-js.html)
+### 출처
 
-(배포하려고 할때 시작점이 되어준 고마운 블로그)
-
-출처 2. [Github Pages로 블로그 배포하기](https://soharu.github.io/posts/2019-09-18-Deploying-to-GitHub-Pages/)
-
-(어쩌다가 배포 레포와 소스 레포를 분리하신 분이고 딱 내가 필요한 과정을 
-그대로 진행한 블로그)
+- [ssh 생성 및 github 저장소 저장하기 - JOOTC 블로그 ](https://jootc.com/p/201905122827)
+- [Git (7) Github 비밀번호 입력 없이 pull/push 하기(github ssh key 설정)](https://goddaehee.tistory.com/254)
+- [GatsbyJS 개발 환경 셋팅부터 GitHub Pages 배포까지 (musma 블로그)](https://musma.github.io/2019/08/09/gatsby-js.html)
+   (배포하려고 할때 시작점이 되어준 고마운 블로그)
+- [Github Pages로 블로그 배포하기](https://soharu.github.io/posts/2019-09-18-Deploying-to-GitHub-Pages/)
+   (어쩌다가 배포 레포와 소스 레포를 분리하신 분이고 딱 내가 필요한 과정을 그대로 진행한 블로그)
