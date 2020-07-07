@@ -22,38 +22,39 @@ gatsby로 깨작깨작 열심히 개발블로그를 만들었고
 
 맥의 경우 기본적으로 ssh key파일들은 아래 디렉터리에 저장되어 있다. 
 
-> ```shell
-> ~/.ssh
->```
+```shell
+~/.ssh
+```
   
 다음 명령어로 key를 생성하는데 이메일은 깃계정에 등록된 이메일로 하자.
 또한 key의 비밀번호를 설정할 수 있게 되어 있는데 없이 하는것이 편하다.  
 
-> ```shell
->    ssh-keygen -t rsa -b 4096 -C "my-email@example.com"
->```   
+```shell
+ssh-keygen -t rsa -b 4096 -C "my-email@example.com"
+```   
 
 생성된 파일중에서 .pub로 끝나는 파일의 값을 git > profile > settings > ssh and gps keys 메뉴에서 설정해 준다. 
 (값 내용을 복사해서 넣게끔 되어있다.)
  
 
 실수로 ssh key를 생성할때 비밀번호를 등록해주었다면 다음 명령어로 없애줄 수 있다.
-> ```shell
->  ssh-keygen -p
-> ```
+
+```shell
+ssh-keygen -p
+```
 
 ssh key가 있어도 안될때에는, 
 내 경우에는 SSH-AGENT에 키를 등록하니 해결이 되었다. 
   
 > ssh-agent 의 동작 확인
-> ```shell
-> eval "$(ssh-agent -s)"
-> ```
+```shell
+eval "$(ssh-agent -s)"
+```
 
 >  ssh-agent 에 key 등록하기 
-> ```shell
-> ssh-add ~/.ssh/id_rsa
-> ```
+```shell
+ssh-add ~/.ssh/id_rsa
+```
  
 ### 3. 다른 레포에 github page 배포하기 
 
@@ -61,22 +62,22 @@ ssh key가 있어도 안될때에는,
 
 개인 사이트는 [사용자명].github.io 로 레포를 만들어야 되고 package.json에 다음처럼 명령어를 입력해준다. 
 
-> ```shell
->"scripts": { 
-> "deploy": "gatsby build && gh-pages -d public -b master"
->}
-> ```
+```shell
+"scripts": { 
+    "deploy": "gatsby build && gh-pages -d public -b master"
+}
+```
 
 만약, 소스레포와 배포레포가 다르다면 다음 부분에서 계정부분만 잘 변경해서 
 package.json을 작성해주면 된다. 이걸 그대로 실행하기 위해서 ssh설정을 잘 해줄 필요가 있다. 
 
-> ```shell
->{
->    "scripts": {
->        "deploy": "gatsby build && gh-pages -d public -r git@github.com:soharu/soharu.github.io.git -b master"
->  }
->}
-> ```
+ ```shell
+{
+    "scripts": {
+        "deploy": "gatsby build && gh-pages -d public -r git@github.com:soharu/soharu.github.io.git -b master"
+    }
+}
+```
 
 배포 끝..
 
